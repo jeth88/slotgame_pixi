@@ -1,0 +1,53 @@
+Test task:
+
+
+- To implement the animation of spinning like on video attached
+- Symbols are described as two-dimensional array, the order is 
+
+
+chaotic
+[
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12],
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13],
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11],
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+] 
+
+
+- Round spin button should be placed below the reels (reel is the vertical column of symbols)
+
+
+- When the spin button is pressed it gets disabled until the full stop of reels
+
+
+- When the reels are spinning Reel_Spin.mp3 plays
+
+
+- Position of reel stop is random. The interval between the reel stops is the same
+
+
+- When the reel stops Landing_1.mp3 plays
+
+
+- Reel starts to spin from the position it stopped on
+
+
+- The end of reel array is the same to beggining so it spins cyclically
+
+To use:
+
+
+- TypeScript (preferably) or JavaScript as a language
+
+
+- http://www.pixijs.com/ as a renderer
+
+
+- for sounds 
+
+- http://www.createjs.com/soundjs or any other option

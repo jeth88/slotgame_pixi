@@ -1,0 +1,2 @@
+# slotgame_pixijs
+ 
