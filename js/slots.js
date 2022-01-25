@@ -24,25 +24,25 @@ function registerSounds()
 }
 
 PIXI.loader
-    .add("01","images/01.png")
-	.add("02","images/02.png")
-	.add("03","images/03.png")
-	.add("04","images/04.png")
-	.add("05","images/05.png")
-	.add("06","images/06.png")
-	.add("07","images/07.png")
-	.add("08","images/08.png")
-	.add("09","images/09.png")
-	.add("10","images/10.png")
-	.add("11","images/11.png")
-	.add("12","images/12.png")
-	.add("13","images/13.png")
-	.add("reelFrameOutline", "images/slotOverlay.png")
-	.add("symbolBackground", "images/frameBackground.png")
-	.add("btnNormalState", "images/btn_spin_normal.png")
-	.add("btnHoverState", "images/btn_spin_hover.png")
-	.add("btnPressState", "images/btn_spin_pressed.png")
-	.add("btnDisableState", "images/btn_spin_disabled.png")
+    .add("icon01","images/icon01.png")
+	.add("icon02","images/icon02.png")
+	.add("icon03","images/icon03.png")
+	.add("icon04","images/icon04.png")
+	.add("icon05","images/icon05.png")
+	.add("icon06","images/icon06.png")
+	.add("icon07","images/icon07.png")
+	.add("icon08","images/icon08.png")
+	.add("icon09","images/icon09.png")
+	.add("icon10","images/icon10.png")
+	.add("icon11","images/icon11.png")
+	.add("icon12","images/icon12.png")
+	.add("icon13","images/icon13.png")
+	.add("reelFrame", "images/reelFrame.png")
+	.add("symbolBackground", "images/symbolBackground.png")
+	.add("btnSpinNormalState", "images/btn_spin_normal.png")
+	.add("btnSpinHoverState", "images/btn_spin_hover.png")
+	.add("btnSpinPressState", "images/btn_spin_pressed.png")
+	.add("btnSpinDisableState", "images/btn_spin_disabled.png")
     .load(onAssetsLoaded);
 
 function onAssetsLoaded()
@@ -51,43 +51,43 @@ function onAssetsLoaded()
 
 	//Create different icon symbols.
 	var icons = [
-		PIXI.Texture.fromImage("01"), //10
-		PIXI.Texture.fromImage("02"), //jack
-		PIXI.Texture.fromImage("03"), //queen
-		PIXI.Texture.fromImage("04"), //king
-		PIXI.Texture.fromImage("05"), //ace
-		PIXI.Texture.fromImage("06"), //coco
-		PIXI.Texture.fromImage("07"), //snake
-		PIXI.Texture.fromImage("08"), //frog
-		PIXI.Texture.fromImage("09"), //bird
-		PIXI.Texture.fromImage("10"), //banana round
-		PIXI.Texture.fromImage("11"), //banana rectangle
-		PIXI.Texture.fromImage("12"), //wild
-		PIXI.Texture.fromImage("13")  //mr monkey
+		PIXI.Texture.fromImage("icon01"), //10
+		PIXI.Texture.fromImage("icon02"), //jack
+		PIXI.Texture.fromImage("icon03"), //queen
+		PIXI.Texture.fromImage("icon04"), //king
+		PIXI.Texture.fromImage("icon05"), //ace
+		PIXI.Texture.fromImage("icon06"), //coco
+		PIXI.Texture.fromImage("icon07"), //snake
+		PIXI.Texture.fromImage("icon08"), //frog
+		PIXI.Texture.fromImage("icon09"), //bird
+		PIXI.Texture.fromImage("icon10"), //banana round
+		PIXI.Texture.fromImage("icon11"), //banana rectangle
+		PIXI.Texture.fromImage("icon12"), //wild
+		PIXI.Texture.fromImage("icon13")  //mr monkey
 	];
 
 	var reelMapping = [
-		[ //reel or column 1
+		[ //reel 1 or column 1
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[10],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[11]
 		],
-		[ //reel or column 2
+		[ //reel 2 or column 2
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[12]
 		],
-		[ //reel or column 3
+		[ //reel 3 or column 3
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9]
 		],
-		[ //reel or column 4
+		[ //reel 4 or column 4
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[10],
 		],
-		[ //reel or column 5
+		[ //reel 5 or column 5
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9],
 			icons[0],icons[1],icons[2],icons[3],icons[4],icons[5],icons[6],icons[7],icons[8],icons[9]
@@ -107,9 +107,6 @@ function onAssetsLoaded()
 			case 3: returnedReelMap = reelstops3; break;
 			default: returnedReelMap = reelstops4; break; // 4 or other number
 		}
-
-		//console.log("reelStopsToUse: " + reelStopsToUse);
-		//console.log("returnedReelMap: " + returnedReelMap);
 
 		return returnedReelMap;
 	}
@@ -164,7 +161,7 @@ function onAssetsLoaded()
 	reelContainer.y = 30;
 	reelContainer.x = 35;
 
-	var reelFrameImage = PIXI.Texture.fromImage("reelFrameOutline");
+	var reelFrameImage = PIXI.Texture.fromImage("reelFrame");
 	var reelFrameSprite = new PIXI.Sprite(reelFrameImage);
 	reelFrameSprite.y = 0; //margin/2;
 	reelFrameSprite.width = app.screen.width+5;
@@ -220,10 +217,10 @@ function onAssetsLoaded()
 	});
 	
 	var buttonContainer = new PIXI.Container();
-	var btnNormal = new PIXI.Sprite(PIXI.Texture.fromImage("btnNormalState"));
-	var btnHover = new PIXI.Sprite(PIXI.Texture.fromImage("btnHoverState"));
-	var btnPressed = new PIXI.Sprite(PIXI.Texture.fromImage("btnPressState"));
-	var btnDisabled = new PIXI.Sprite(PIXI.Texture.fromImage("btnDisableState"));
+	var btnNormal = new PIXI.Sprite(PIXI.Texture.fromImage("btnSpinNormalState"));
+	var btnHover = new PIXI.Sprite(PIXI.Texture.fromImage("btnSpinHoverState"));
+	var btnPressed = new PIXI.Sprite(PIXI.Texture.fromImage("btnSpinPressState"));
+	var btnDisabled = new PIXI.Sprite(PIXI.Texture.fromImage("btnSpinDisableState"));
 
 	btnNormal.scale.set(0.8, 0.8);
 	btnHover.scale.set(0.8, 0.8);
@@ -332,7 +329,6 @@ function onAssetsLoaded()
 		spinText.alpha = 1;
 		spinText.setStyle(styleNormal);
 
-		//console.log("before reelMappingToUse: " + reelMappingToUse);
 		for (var i = 0; i < reelMappingToUse.length; i++)
 		{
 			reelMappingToUse[i] += 4;
@@ -341,7 +337,6 @@ function onAssetsLoaded()
 				reelMappingToUse[i] = ((reelMappingToUse[i] + 4) - 29)-1;
 			}
 		}
-		//console.log("after reelMappingToUse: " + reelMappingToUse);
 	}
 	
 	// Listen for animate update.
