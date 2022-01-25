@@ -19,8 +19,6 @@ function registerSounds()
 {
 	createjs.Sound.registerSound("sounds/Landing_1.mp3", reelStopSound);
 	createjs.Sound.registerSound("sounds/Reel_Spin.mp3", reelSpinSound);
-
-	//console.log("Done registering sounds");
 }
 
 PIXI.loader
